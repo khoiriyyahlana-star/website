@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <i class="fas fa-wallet" aria-hidden="true"></i>
+      <h3>Catatan Keuangan Mu</h3>
+    </div>
+
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="setting.html">Setting</a>
+      <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+      
+      <select id="themeSelect" aria-label="Pilih tampilan">
+        <option value="light">Terang</option> 
+        <option value="dark">Gelap</option>
+      </select>
+
+      <button type="button">Tambah transaksi</button>
+      <button type="button">Tambah kategori</button>
+    </nav>
+  </header>
+
+  <hr>
+
+<!--TITLE-->
+  <div>
+    <h1>Pengaturan</h1>
+  </div>
+
+ <!--SIDEBAR TABS NAVIGATION-->
+  <div>
+    <nav>
+      <button>Profil Akun</button>
+      <br>
+      <button>keamanan</button>
+      <br>
+      <button>Kelola mata uang dan format tanggal</button>
+      <br>
+      <button>Keluar akun</button>
+    </nav>
+  </div>
+  
+  <hr>
+
+<!--PROFIL-->
+  <div>
+    <h2>Profil Akun</h2>
+    <p>Lengkapi Profil anda di bawah ini</p>
+  </div>
+  <hr>
+  <br>
+  <div>
+    <i class="fa fa-user-circle" style="font-size:48px;color:rgb(83, 83, 90)"></i>
+    <button>Unggah foto</button>
+    <button>Hapus foto</button>
+    <p>Hanya mendukung file JPG, PNG</p>
+  </div>
+
+  <!--form profil-->
+  <div>
+  <div>
+    <label for="Masukan Nama Pengguna">Nama pengguna</label>
+    <br>
+    <input type text id="Nama pengguna" value="Lusy">
+  </div>
+
+  <div>
+    <label for="Alamat Email">Email</label>
+    <br>
+    <input type="email" Value="lucycantika@gmail.com">
+  </div>
+
+  <br>
+
+  <div>
+    <button type="submit">Simpan perubahan</button>
+    <button type="button">Batal</button>
+  </div>
+  </div>
+  <hr>
+
+  <!--Keamanan-->
+  <div id="content-security">
+    <h2>Keamanan dan Password</h2>
+    <p>Atur keamanan sandi anda</p>
+  </div>
+
+  <form>
+    <div>
+      <label>Kata sandi saat ini</label>
+      <br>
+      <input type="password" placeholder="••••••••">
+    </div>
+
+    <div>
+      <label>Kata sandi baru</label>
+      <br>
+      <input type="password" placeholder="••••••••">
+    </div>
+
+    <div>
+      <label>Konfirmasi kata sandi baru</label>
+      <br>
+      <input type="password" placeholder="••••••••">
+    </div>
+    <br>
+    <button type="submit">Perbarui kata sandi</button>
+  </form>
+  <hr>
+
+  <!--Tampilan mata uang dan format tanggal-->
+  <div>
+    <h2>Kelola mata uang dan format tanggal</h2>
+    <p>sesuaikan tampilan dan mata uang yang anda inginkan</p>
+  </div>
+
+  <form>
+    <div>
+      <label>Mata uang</label>
+      <select>
+        <option value="IDR">Rupiah</option>
+        <option value="USD">US dollar</option>
+        <option value="EUR">Euro</option>
+        <option value="SGD">Singapur dollar</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Format Tanggal</label>
+      <select>
+        <option value="date">DD MMM YYYY (01 okt 2024) </option>
+        <option value="date">YYYY-MM-DD (2024-10-01) </option>
+        <option value="date">DD/MM/YYYY (01/10/2024) </option>
+      </select>
+    </div>
+    <br>
+    <button type="submit">Simpan</button>
+    <hr>
+  </form>
+
+  <section id="confirm-logout-section"></section>
+  <section id="logout">
+    <h2>Keluar akun</h2>
+    <p>Keluar dari akun anda</p>
+    <button type="submit">Keluar</button>
+    <button type="button">Batal</button>
+  </section>
+
+  <div id="cancel-massage" hidden>
+    <br>
+    <p><em>Tindakan dibatalkan</em></p>
+  </div>
+  </section>
+
+      <section id="logged-out-section" hidden>
+      <fieldset>
+        <legend><strong>Status Sesi: Berakhir</strong></legend>
+        <h2>Anda Telah Berhasil Keluar</h2>
+        <p>Terima kasih telah menggunakan <strong>Aplikasi Catatan Keuangan</strong> untuk mengelola keuangan Anda.</p>
+        
+        <hr>
+        
+        <p>Ingin mengakses akun Anda lagi?</p>
+        <button type="button" onclick="handleLoginBack()"><strong>Masuk Kembali ke Akun</strong></button>
+      </fieldset>
+    </section>
+  
+</body>
+</html>

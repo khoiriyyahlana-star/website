@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Masuk</title>
+</head>
+<body>
+<!-- form login "ditamah nama file"-->
+ <header>
+      <h3>Silahkan  isi data di diri di bawah ini</h3>
+</header>
+
+    <form action="file.php" method="post"> <!--"file.php" ganti dengan nama file php-->
+        <div>
+           <label for="Masukan email">email:</label>
+           <input type="text" id="email" name="email" placeholder="Masukkan email kamu" required>
+        </div>
+
+        <br>
+
+        <div>
+           <label for="Masukan nama pengguna">Username:</label>
+           <input type="text" id="Nama pengguna" name="Nama pengguna" placeholder="Masukkan nama kamu" required>
+        </div>
+
+        <br>
+
+        <div>
+           <label for="Masukan Password">Password:</label>
+           <input type="password" id="password" name="password" placeholder="Masukkan password kamu" required>
+        </div> 
+    </form>
+
+    <br>
+
+    <button type="submit"> <a href="dashboard.html">Masuk</a></button>
+
+    <p>belum punya akun ? <a href="daftar.html">Daftar di sini</a></p>
+
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/9bf82902ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <i class="fas fa-wallet" aria-hidden="true"></i>
+      <H1>Catatan Keuangan Mu</H1>
+    </div>
+
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="setting.html">Setting</a>
+      <a href="riwayat.html">Riwayat</a>
+      <select id="themeSelect" aria-label="Pilih tampilan">
+        <option value="light">Terang</option>
+        <option value="dark">Gelap</option>
+      </select>
+
+    </nav>
+  </header>
+  <br>
+<!--pencarian-->
+     <div>
+      <h3>Pencaharian </h3>
+      <label for="searchInput"></label>
+      <input type="text" id="searchInput" placeholder="Masukkan kata kunci">
+      
+
+      <label for="filterSelect"></label>
+      <select id="filterSelect">
+        <option value="">Jenis</option>
+        <option value="pemasukan">Pemasukan</option>
+        <option value="pengeluaran">Pengeluaran</option>
+      </select>
+      <button type="submit">Cari</button>
+     </div>
+     
+     <br>
+
+     <!--DAFTAR TRANSAKSI-->
+     <div>
+      <h3>Daftar Transaksi</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Kategori</th>
+            <th>Jenis</th>
+            <th>Jumlah</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+          <!-- Data transaksi akan ditampilkan di sini -->
+        </tbody>
+      </table>
+     </div>
+ 
+     <!--ketika tidak ada transaksi--->
+     <p id="empty-state">Tidak ada transaksi yang ditemukan.</p>
+
+     <!--jumlah riwayat-->
+     <p id="showing-info">menampilkan 7 dari 10 transaksi</p>
+     
+     <button type="button">sebelumnya</button>
+     <button type="button">2</button>
+     <button type="button">berikutnya</button>
+     <button type="button">tampilkan keseluruhan</button>
+   </body>
+</html>

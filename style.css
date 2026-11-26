@@ -1,0 +1,900 @@
+/* 1. WARNA UTAMA APLIKASI*/
+:root {
+    --deep-emerald: #123D32;
+    --forest-green: #1F5C46;
+    --mint-white: #EAF2EC;
+    --emerald-green: #2D765B;
+    --sage-green: #A3BFA8;
+
+    --white: #FFFFFF;
+    --text-dark: #26352D;
+    --text-muted: #718078;
+    --border: #DCE7DE;
+    --shadow: 0 4px 15px rgba(18, 61, 50, 0.08);
+}
+
+/* 2. RESET DAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--mint-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 3. HEADER DAN NAVIGASI */
+header {
+    background: var(--deep-emerald);
+    color: var(--white);
+    padding: 20px 5%;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--sage-green);
+}
+
+/*  4. TOMBOL */
+button,
+.btn {
+    background: var(--forest-green);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    transition: 0.2s;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--emerald-green);
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--sage-green);
+    outline-offset: 2px;
+}
+
+/* 5. DASHBOARD */
+.dashboard-page {
+    padding: 0;
+}
+
+.dashboard-page h2 {
+    color: var(--deep-emerald);
+    margin: 24px 0 16px;
+}
+
+.dashboard-page > div {
+    padding: 25px 5%;
+}
+
+.dashboard-page table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 20px 0;
+}
+
+.dashboard-page th {
+    background: var(--forest-green);
+    color: var(--white);
+}
+
+.dashboard-page th,
+.dashboard-page td {
+    padding: 13px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+.dashboard-page tr:hover {
+    background: var(--mint-white);
+}
+
+/* 6. KARTU DAN FORM */
+.card,
+.dashboard-page form,
+.setting-page section {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 22px;
+    margin: 18px 0;
+    box-shadow: var(--shadow);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin: 7px 0 15px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--white);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--deep-emerald);
+}
+
+/* 7. HALAMAN SETTING */
+.setting-page {
+    background: var(--mint-white);
+}
+
+.setting-page > div {
+    padding: 25px 5%;
+}
+
+.setting-page h2,
+.setting-page h3 {
+    color: var(--deep-emerald);
+    margin-bottom: 15px;
+}
+
+/* 8. HALAMAN LOGIN DAN DAFTAR */
+.login-page,
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: var(--mint-white);
+}
+
+.login-page form,
+.register-page form {
+    width: 100%;
+    max-width: 420px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.login-page h1,
+.register-page h1 {
+    color: var(--deep-emerald);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-page a,
+.register-page a {
+    color: var(--emerald-green);
+    text-decoration: none;
+}
+
+/* 9. RESPONSIVE */
+@media (max-width: 768px) {
+    .dashboard-page > div,
+    .setting-page > div {
+        padding: 15px;
+    }
+
+    .dashboard-page table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   DASHBOARD MODERN - CATATAN KEUANGAN
+========================================= */
+
+.dashboard-page {
+    background: #EAF2EC;
+    color: #26352D;
+    padding: 0;
+}
+
+/* HEADER */
+.dashboard-page .main-header {
+    margin: 25px 4%;
+    padding: 18px 28px;
+    background: #FFFFFF;
+    color: #123D32;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(18, 61, 50, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-page .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-page .brand i {
+    font-size: 28px;
+    color: #2D765B;
+}
+
+.dashboard-page .brand h1 {
+    font-size: 21px;
+    color: #123D32;
+}
+
+.dashboard-page .main-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.dashboard-page .main-header nav a {
+    color: #52645A;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.dashboard-page .main-header nav a:hover,
+.dashboard-page .main-header nav a.active {
+    color: #1F5C46;
+    font-weight: bold;
+}
+
+.dashboard-page .header-button {
+    background: #123D32;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 11px 17px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* LAYOUT UTAMA */
+.dashboard-page .dashboard-layout {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 25px;
+    margin: 30px 4%;
+    align-items: start;
+}
+
+.dashboard-page .left-panel,
+.dashboard-page .right-panel {
+    min-width: 0;
+    padding: 0;
+}
+
+/* KARTU FORM */
+.dashboard-page .form-card,
+.dashboard-page .table-section,
+.dashboard-page .chart-card {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 14px;
+    margin: 0 0 22px;
+    box-shadow: 0 5px 18px rgba(18, 61, 50, 0.07);
+}
+
+.dashboard-page .form-card h2,
+.dashboard-page .table-section h2,
+.dashboard-page .chart-card h2 {
+    color: #123D32;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* INPUT FORM */
+.dashboard-page .field {
+    margin-bottom: 17px;
+}
+
+.dashboard-page .field label {
+    display: block;
+    color: #26352D;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.dashboard-page input,
+.dashboard-page select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DCE7DE;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #26352D;
+    margin: 0;
+}
+
+.dashboard-page input:focus,
+.dashboard-page select:focus {
+    border-color: #2D765B;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45, 118, 91, 0.10);
+}
+
+/* TOMBOL FORM */
+.dashboard-page .button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dashboard-page .button-row button {
+    flex: 1;
+    padding: 12px 10px;
+    background: #1F5C46;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.dashboard-page .button-row .cancel-button {
+    background: #EAF2EC;
+    color: #123D32;
+}
+
+.dashboard-page .button-row button:hover {
+    opacity: 0.85;
+}
+
+/* RINGKASAN KEUANGAN */
+.dashboard-page .summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.dashboard-page .summary-card {
+    background: #FFFFFF;
+    padding: 22px 18px;
+    border-radius: 12px;
+    border-left: 5px solid #2D765B;
+    box-shadow: 0 5px 18px rgba(18, 61, 50, 0.07);
+}
+
+.dashboard-page .summary-card h3 {
+    color: #718078;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.dashboard-page .summary-card p {
+    color: #123D32;
+    font-size: 21px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-page .summary-card span {
+    display: block;
+    color: #718078;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.dashboard-page .expense-card {
+    border-left-color: #B96A6A;
+}
+
+.dashboard-page .balance-card {
+    border-left-color: #A3BFA8;
+}
+
+/* GRAFIK SEMENTARA */
+.dashboard-page .chart-card {
+    margin-bottom: 22px;
+}
+
+.dashboard-page .section-heading p {
+    color: #718078;
+    font-size: 13px;
+    margin-top: -14px;
+    margin-bottom: 15px;
+}
+
+.dashboard-page .chart-placeholder {
+    min-height: 190px;
+    border: 1px dashed #A3BFA8;
+    border-radius: 10px;
+    background: #F7FAF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #718078;
+}
+
+.dashboard-page .chart-placeholder i {
+    font-size: 35px;
+    color: #2D765B;
+}
+
+/* TABEL TRANSAKSI */
+.dashboard-page .table-section {
+    overflow: hidden;
+}
+
+.dashboard-page .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-page table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    box-shadow: none;
+    margin: 0;
+}
+
+.dashboard-page th {
+    background: #EAF2EC;
+    color: #123D32;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.dashboard-page td {
+    color: #52645A;
+    font-size: 13px;
+    background: #FFFFFF;
+}
+
+.dashboard-page th,
+.dashboard-page td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #E5ECE6;
+    text-align: left;
+}
+
+.dashboard-page tr:hover td {
+    background: #F7FAF7;
+}
+
+/* LABEL JENIS TRANSAKSI */
+.dashboard-page .income-label,
+.dashboard-page .expense-label {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    background: #EAF2EC;
+    color: #1F5C46;
+}
+
+.dashboard-page .expense-label {
+    background: #F9EAEA;
+    color: #A34F4F;
+}
+
+/* TOMBOL AKSI */
+.dashboard-page .action-group {
+    display: flex;
+    gap: 5px;
+}
+
+.dashboard-page .action-group button {
+    padding: 7px 10px;
+    font-size: 11px;
+    border-radius: 6px;
+}
+
+.dashboard-page .action-group .delete-button {
+    background: #A94E4E;
+}
+
+/* FORM EDIT */
+.dashboard-page .edit-card {
+    margin-top: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .dashboard-page .dashboard-layout {
+        grid-template-columns: 280px minmax(0, 1fr);
+    }
+
+    .dashboard-page .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-page .main-header {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    .dashboard-page .dashboard-layout {
+        grid-template-columns: 1fr;
+        margin: 20px 4%;
+    }
+
+    .dashboard-page .main-header {
+        margin: 15px 4%;
+        padding: 18px;
+    }
+
+    .dashboard-page .main-header nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-page .brand h1 {
+        font-size: 18px;
+    }
+
+    .dashboard-page .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-page .form-card,
+    .dashboard-page .table-section,
+    .dashboard-page .chart-card {
+        padding: 18px;
+    }
+}
+
+
+
+/* LOGIN PAGE - CATATAN KEUANGAN*/
+
+.login-page {
+    min-height: 100vh;
+    padding: 35px 20px;
+    background: #EAF2EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.login-page .auth-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+/* BRAND */
+.login-page .auth-brand {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-page .auth-brand i {
+    font-size: 42px;
+    color: #2D765B;
+    margin-bottom: 10px;
+}
+
+.login-page .auth-brand h1 {
+    color: #123D32;
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.login-page .auth-brand p {
+    color: #718078;
+    font-size: 14px;
+}
+
+/* LOGIN CARD */
+.login-page .auth-card {
+    background: #FFFFFF;
+    padding: 38px 35px;
+    border-radius: 28px;
+    box-shadow: 0 12px 35px rgba(18, 61, 50, 0.09);
+}
+
+.login-page .auth-card h2 {
+    text-align: center;
+    color: #123D32;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.login-page .auth-description {
+    text-align: center;
+    color: #718078;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* INPUT */
+.login-page .auth-field {
+    margin-bottom: 20px;
+}
+
+.login-page .auth-field label {
+    display: block;
+    color: #26352D;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.login-page .auth-field input {
+    width: 100%;
+    height: 50px;
+    padding: 0 17px;
+    border: none;
+    border-radius: 30px;
+    background: #F1F4F1;
+    color: #26352D;
+    font-size: 14px;
+}
+
+.login-page .auth-field input:focus {
+    outline: 2px solid #A3BFA8;
+    background: #FFFFFF;
+}
+
+/* REMEMBER PASSWORD */
+.login-page .auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 25px;
+    font-size: 12px;
+}
+
+.login-page .remember-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #718078;
+}
+
+.login-page .remember-option input {
+    width: auto;
+    margin: 0;
+    accent-color: #1F5C46;
+}
+
+.login-page .auth-options a {
+    color: #2D765B;
+    text-decoration: none;
+}
+
+/* BUTTON */
+.login-page .auth-button {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 30px;
+    background: #1F5C46;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-page .auth-button:hover {
+    background: #123D32;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+.login-page .auth-footer {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 13px;
+    color: #718078;
+}
+
+.login-page .auth-footer a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #2D765B;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-page .auth-copyright {
+    text-align: center;
+    color: #718078;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .login-page .auth-card {
+        padding: 30px 22px;
+        border-radius: 23px;
+    }
+
+    .login-page .auth-brand h1 {
+        font-size: 23px;
+    }
+}
+
+
+
+
+/* REGISTER PAGE - CATATAN KEUANGAN */
+
+.register-page {
+    min-height: 100vh;
+    padding: 35px 20px;
+    background: #EAF2EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-page .auth-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+.register-page .auth-brand {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.register-page .auth-brand i {
+    font-size: 42px;
+    color: #2D765B;
+    margin-bottom: 10px;
+}
+
+.register-page .auth-brand h1 {
+    color: #123D32;
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.register-page .auth-brand p {
+    color: #718078;
+    font-size: 14px;
+}
+
+.register-page .auth-card {
+    background: #FFFFFF;
+    padding: 38px 35px;
+    border-radius: 28px;
+    box-shadow: 0 12px 35px rgba(18, 61, 50, 0.09);
+}
+
+.register-page .auth-card h2 {
+    text-align: center;
+    color: #123D32;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.register-page .auth-description {
+    text-align: center;
+    color: #718078;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.register-page .auth-field {
+    margin-bottom: 17px;
+}
+
+.register-page .auth-field label {
+    display: block;
+    color: #26352D;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.register-page .auth-field input {
+    width: 100%;
+    height: 48px;
+    padding: 0 17px;
+    border: none;
+    border-radius: 30px;
+    background: #F1F4F1;
+    color: #26352D;
+    font-size: 14px;
+}
+
+.register-page .auth-field input:focus {
+    outline: 2px solid #A3BFA8;
+    background: #FFFFFF;
+}
+
+.register-page .auth-button {
+    width: 100%;
+    height: 52px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 30px;
+    background: #1F5C46;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-page .auth-button:hover {
+    background: #123D32;
+    transform: translateY(-2px);
+}
+
+.register-page .auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #718078;
+}
+
+.register-page .auth-footer a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #2D765B;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-page .auth-copyright {
+    text-align: center;
+    color: #718078;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+@media (max-width: 480px) {
+    .register-page .auth-card {
+        padding: 30px 22px;
+        border-radius: 23px;
+    }
+
+    .register-page .auth-brand h1 {
+        font-size: 23px;
+    }
+}
